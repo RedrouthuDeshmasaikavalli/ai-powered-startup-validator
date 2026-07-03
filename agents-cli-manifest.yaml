@@ -1,0 +1,15 @@
+name: "startup-idea-validator"
+acli_version: "0.5.1"
+agent_directory: "app"
+region: "us-east1"
+base_template: "adk"
+generated_at: "2026-07-01T08:56:41.813528+00:00"
+language: "python"
+create_params:
+  deployment_target: "agent_runtime"
+  session_type: "none"
+  cicd_runner: "skip"
+  include_data_ingestion: false
+  
+  datastore: "none"
+  agent_guidance_filename: "GEMINI.md"

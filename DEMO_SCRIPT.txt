@@ -1,0 +1,62 @@
+[0:00 — HOOK]
+Are you tired of the uncertainty and bias that comes with launching a new startup? Many innovators waste months building products that have no real market demand or viable business model. Today, I am going to show you the Startup Idea Validator Agent—a tool designed to help entrepreneurs, students, and product teams pressure-test their business concepts before writing a single line of code.
+
+(pause)
+
+[0:20 — WHAT IT IS]
+This project is built on the Google Agent Development Kit, or ADK 2.0. It acts as an autonomous advisory team that takes your startup idea, target audience, and budget, and runs a structured feasibility study using specialized sub-agents and a mock Model Context Protocol market database.
+
+(pause)
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see from our cover banner, this system is automated, secure, and intelligent, leveraging Gemini 2.5 Flash to generate reliable business validation scorecards.
+
+(pause)
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let's trace how a request flows through the architecture.
+First, the input enters the START node and lands at the security_checkpoint.
+This checkpoint scrubs personal data and filters out disallowed business models, routing bad ideas directly to the security_event node.
+Clean inputs route to the lead orchestrator agent.
+The orchestrator delegates to two specialized sub-agents: the market_analyst and the financial_advisor.
+These sub-agents pull fresh data on competitors, TAM, and margins from our local Model Context Protocol server.
+The orchestrator then compiles an initial assessment and sends it to the hitl_gate.
+Here, the validation pauses to ask the human user for feedback or clarifications.
+Once the user confirms, the final_evaluator takes over to produce a structured JSON viability report, which is converted to a clean report by the render_output node.
+
+(pause)
+
+[2:00 — LIVE DEMO]
+(switch to playground at localhost:18081)
+Let's see this validation in action. 
+I will submit our first test case: a micro-investment platform for children to learn financial literacy in the USA, with a $50,000 self-funded budget.
+(pause - click run in playground)
+Notice how the logs show the security checkpoint clearing the input with INFO status.
+The orchestrator runs and queries the market analyst for competitors and TAM, and the financial advisor for CAC targets.
+Now, the flow is paused at the hitl_gate. It shows the initial assessment in the playground UI and asks for confirmation.
+I will type 'approve' and click send.
+(pause - click submit in playground)
+The flow completes! We now have our final viability scorecard showing a score of 85 out of 100 with a Strong Match recommendation, along with competitor insights and revenue strategies.
+
+Let's test our security safety gate with a second case.
+I will input a startup idea containing raw PII like 'admin@mysecretstartup.com' and the phone number '555-019-2834'.
+(pause - run in playground)
+As expected, our security checkpoint automatically redacts this to [EMAIL_SCRUBBED] and [PHONE_SCRUBBED] so it never hits the LLM, but still lets the validation proceed.
+
+Finally, what happens if someone inputs an illegal concept, like a weapons distribution website?
+(pause - run weapons validation)
+The security checkpoint instantly logs a CRITICAL warning, blocks the execution, and outputs: 'Validation Blocked: Security violation: Startup idea matches banned business category weapons.'
+
+(pause)
+
+[3:00 — SECURITY & MCP]
+Our security checkpoint safeguards user privacy by scrubbing emails and phones, and protects the system using keyword-based prompt injection blocks.
+Meanwhile, our Model Context Protocol server provides domain-specific tools: get_competitors, estimate_market_size, and get_revenue_benchmarks, ensuring our expert agents have realistic data to make their evaluations.
+
+(pause)
+
+[3:30 — IMPACT / CLOSE]
+This agent empowers early-stage founders to run automated sanity checks on their ideas in seconds. By showing you the viability score, market size, and monetization benchmarks upfront, we help you focus your energy on ideas that actually make business sense. 
+Thank you!

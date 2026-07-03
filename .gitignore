@@ -1,0 +1,35 @@
+# Secrets — never commit
+.env
+*.env
+.env.*
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# ADK local state
+.adk/
+*.db
+
+# Test & lint caches
+.pytest_cache/
+.ruff_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Terraform state (may contain secrets)
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+
+# Artifacts & traces
+artifacts/
