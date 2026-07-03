@@ -1,6 +1,31 @@
-# Startup Idea Validator Agent
+# AI-Powered Startup Validator
 
-A simulated multi-agent system built with the Google Agent Development Kit (ADK 2.0) that validates startup ideas by conducting feasibility, competitive, financial, and risk analyses.
+An AI-powered multi-agent system built using the Google Agent Development Kit (ADK 2.0) that evaluates startup ideas through market analysis, financial feasibility, risk assessment, and business validation. The system leverages Gemini 2.5 Flash and specialized AI agents to generate structured startup viability reports.
+## Features
+
+- Multi-Agent Startup Validation Workflow
+- Google ADK 2.0 Implementation
+- Gemini 2.5 Flash Integration
+- Market Analysis
+- SWOT Analysis
+- Financial Feasibility Assessment
+- Risk Identification
+- Startup Viability Score
+- Human-in-the-Loop Approval
+- Security Checkpoint with PII Redaction
+- Mock MCP Server for Market Intelligence
+- ## Tech Stack
+
+- **Programming Language:** Python 3.13
+- **Framework:** Google Agent Development Kit (ADK 2.0)
+- **Large Language Model:** Gemini 2.5 Flash
+- **API Framework:** FastAPI
+- **Protocol:** Model Context Protocol (MCP)
+- **Data Validation:** Pydantic
+- **Application Server:** Uvicorn
+- **Package Manager:** uv
+- **Infrastructure:** Terraform
+- **Version Control:** Git & GitHub
 
 ## Prerequisites
 
@@ -11,10 +36,11 @@ A simulated multi-agent system built with the Google Agent Development Kit (ADK 
 ## Quick Start
 
 1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd startup-idea-validator
-   ```
+
+```bash
+git clone https://github.com/RedrouthuDeshmasaikavalli/ai-powered-startup-validator.git
+cd ai-powered-startup-validator
+```
 
 2. Create and configure your environment file:
    ```bash
@@ -167,35 +193,8 @@ The system contains:
 
 ## Demo Script
 
-A spoken presentation script is available at [DEMO_SCRIPT.txt](file:///c:/Users/Deshma/OneDrive/Desktop/Project-Idea-Generator/startup-idea-validator/DEMO_SCRIPT.txt) for presenting this project and its architecture diagrams.
+A presentation script is included in [`DEMO_SCRIPT.txt`](DEMO_SCRIPT.txt) to assist with the project demonstration and presentation.
+
 
 ---
 
-## Push to GitHub
-
-1. Create a new repo at https://github.com/new
-   - Name: startup-idea-validator
-   - Visibility: Public or Private
-   - Do NOT initialize with README (you already have one)
-
-2. In your terminal, navigate into your project folder:
-   ```bash
-   cd startup-idea-validator
-   git init
-   git add .
-   git commit -m "Initial commit: startup-idea-validator ADK agent"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/startup-idea-validator.git
-   git push -u origin main
-   ```
-
-3. Verify .gitignore includes:
-   ```
-   .env          ← your API key — must NEVER be pushed
-   .venv/
-   __pycache__/
-   *.pyc
-   .adk/
-   ```
-
-⚠ NEVER push `.env` to GitHub. Your API key will be exposed publicly.
