@@ -14,9 +14,11 @@ An AI-powered multi-agent system built using the Google Agent Development Kit (A
 - Human-in-the-Loop Approval
 - Security Checkpoint with PII Redaction
 - Mock MCP Server for Market Intelligence
+
+This system simulates an AI-powered startup evaluation committee similar to early-stage venture capital screening workflows.
 - ## Tech Stack
 
-- **Programming Language:** Python 3.13
+- **Programming Language:** Programming Language: Python (3.11–3.13)
 - **Framework:** Google Agent Development Kit (ADK 2.0)
 - **Large Language Model:** Gemini 2.5 Flash
 - **API Framework:** FastAPI
@@ -60,6 +62,7 @@ cd ai-powered-startup-validator
    This will start the local server and open the ADK playground UI at [http://localhost:18081](http://localhost:18081).
 
 ---
+-Used by founders, accelerators, and incubators to quickly evaluate startup feasibility before investment decisions.
 
 ## Solution Architecture
 
@@ -86,6 +89,7 @@ The system contains:
 - **`financial_advisor`**: A specialized sub-agent that checks average CAC, pricing, and profit margins via MCP.
 - **`hitl_gate`**: An interactive checkpoint requiring the user to approve initial findings or input refinements.
 - **`final_evaluator`**: An agent that digests findings and user corrections to return a structured feasibility scorecard.
+-The system follows a modular multi-agent workflow where each agent is responsible for a specific evaluation domain and operates through a centralized orchestrator.
 
 ---
 
@@ -194,6 +198,13 @@ The system contains:
 ## Demo Script
 
 A presentation script is included in [`DEMO_SCRIPT.txt`](DEMO_SCRIPT.txt) to assist with the project demonstration and presentation.
+
+---
+## 📄 License
+This project is developed for academic and learning purposes as part of a capstone submission. You are free to explore, modify, and extend it for educational use.
+## 👤 Author
+
+**Redrouthu Deshma saikavalli**
 
 
 ---
