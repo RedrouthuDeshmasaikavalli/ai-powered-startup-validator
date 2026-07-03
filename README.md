@@ -192,6 +192,10 @@ The system contains:
      Get-Process -Id (Get-NetTCPConnection -LocalPort 18081, 8090 -ErrorAction SilentlyContinue).OwningProcess | Stop-Process -Force
      ```
      Then start a fresh server.
+4. **`503 UNAVAILABLE` or High Demand Error:**
+   - This occurs when the Gemini API is experiencing high traffic or temporary overload.
+   - Solution: Retry after a few seconds or restart the request.
+   - This is a temporary issue from the model provider and does not indicate a problem in the application code.
 
 ---
 
